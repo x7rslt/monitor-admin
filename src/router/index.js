@@ -149,6 +149,20 @@ export const constantRoutes = [
     ]
   },
 
+//添加测试sidebar
+  {
+    path: '/test',
+    component: Layout,
+    children: [
+      {
+        path: 'test',
+        name: 'test',
+        component: () => import('@/views/test/index'),
+        meta: { title: '测试', icon: 'form' }
+      }
+    ]
+  },
+
   {
     path: 'external-link',
     component: Layout,
