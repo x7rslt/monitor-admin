@@ -36,17 +36,17 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    proxy: {
-      // change xxx-api/login => /mock-api/v1/login
-      // detail: https://cli.vuejs.org/config/#devserver-proxy
-      '/api': {
-        target: `http://localhost:9090`,
-        changeOrigin: true, // needed for virtual hosted sites
-        pathRewrite: {
-          '^/api': '/'
-        }
-      }
-    },
+    // proxy: {
+    //   // change xxx-api/login => /mock-api/v1/login
+    //   // detail: https://cli.vuejs.org/config/#devserver-proxy
+    //   '/api': {
+    //     target: `http://localhost:9090`,
+    //     changeOrigin: true, // needed for virtual hosted sites
+    //     pathRewrite: {
+    //       '^/api': '/'
+    //     }
+    //   }
+    // },
     before: require('./mock/mock-server.js')
   },
   configureWebpack: {

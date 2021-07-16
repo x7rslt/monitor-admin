@@ -161,6 +161,19 @@ export const constantRoutes = [
       }
     ]
   },
+//  添加测试table-test
+  {
+    path: '/table-test',
+    component: Layout,
+    children: [
+      {
+        path: 'table-test',
+        name: 'table-test',
+        component: () => import('@/views/table-test/index'),
+        meta: { title: 'table-test', icon: 'table' }
+      }
+    ]
+  },
 
   // {
   //   path: 'external-link',
