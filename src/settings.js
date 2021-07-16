@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: '网站安全检测平台',
+  title: '网站安全监测平台',
 
   /**
    * @type {boolean} true | false
@@ -12,5 +12,5 @@ module.exports = {
    * @type {boolean} true | false
    * @description Whether show the logo in sidebar
    */
-  sidebarLogo: false
+  sidebarLogo: true
 }

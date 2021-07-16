@@ -2,8 +2,11 @@ import request from '@/utils/request'
 
 export function getList(params) {
   return request({
-    url: '/vue-admin-template/test/list',
+    url: '/v1/dp/hotel/detail/1',
     method: 'get',
-    params
+    params:params,
+    baseURL: 'http://localhost:9090'
   })
 }
+
+
