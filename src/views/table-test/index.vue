@@ -6,7 +6,7 @@
       element-loading-text="加载中"
       border
       fit
-      highlight-current-row
+      highlight-current-row 
     >
       <el-table-column align="center" label="ID" width="95">
         <template slot-scope="scope">
@@ -15,7 +15,7 @@
       </el-table-column>
       <el-table-column label="Title">
         <template slot-scope="scope">
-          {{ scope.row.title }}
+          {{ scope.row.status }}
         </template>
       </el-table-column>
     </el-table>

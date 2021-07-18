@@ -10,12 +10,12 @@
     >
       <el-table-column align="center" label="ID" width="95">
         <template slot-scope="scope">
-          {{ scope.$index }}
+          {{ scope.row.hotelId }}
         </template>
       </el-table-column>
-      <el-table-column label="Title">
+      <el-table-column label="TeamName">
         <template slot-scope="scope">
-          {{ scope.row.title }}
+          {{ scope.row.teamName }}
         </template>
       </el-table-column>
       <el-table-column label="Author" width="110" align="center">
@@ -27,6 +27,8 @@
   </div>
 </template>
 
+
+//  JSON展示
 <script>
 import { getList } from '@/api/test'
 
@@ -45,8 +47,8 @@ export default {
       this.listLoading = true
       getList().then(response => {
         console.log("view done1")
-        this.list = response.data
-        console.log(response.item)
+        this.list = response.item.teamList
+        console.log(this.list)
         this.listLoading = false
       })
     }
